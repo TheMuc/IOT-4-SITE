@@ -1,0 +1,177 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kay Pho Du';
+}
+
+body
+{
+    height: 100vh;
+    background-color: #000000;
+    background-image: url(https://images.unsplash.com/photo-1552845108-5f775a2ccb9b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1vdW50YWluJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww);
+    background-size: cover;
+}
+
+li
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: irem;
+}
+
+a:hover
+{
+    color: rgb(0, 119, 255);
+}
+
+/* HEADER */ /* HEADER */ /* HEADER */ /* HEADER */ /* HEADER */ /* HEADER */ /* HEADER */ /* HEADER */ /* HEADER */ /* HEADER */ /* HEADER */ /* HEADER */ 
+
+header
+{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0 2rem;
+}
+
+.navbar .links a::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 1s;
+    transition-delay: 0.5s;
+}
+
+.navbar .links a:hover::after 
+{
+    transform: scaleX(1);
+    transition: transform .5s;
+}
+
+.navbar
+{
+    width: 100%;
+    height: 60px;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navbar .name a
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links
+{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toogle_btn
+{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn
+{
+    background-color: blue;
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover
+{
+    scale: 1.05;
+    color: #ffffff;
+}
+
+.action_btn:active
+{
+    scale: 0.95;
+}
+
+/* DROP MENU */ /* DROP MENU */ /* DROP MENU */ /* DROP MENU */ /* DROP MENU */ /* DROP MENU */ /* DROP MENU */ /* DROP MENU */ /* DROP MENU */ /* DROP MENU */ /* DROP MENU */ /* DROP MENU */ /* DROP MENU */ /* DROP MENU */ /* DROP MENU */ 
+
+.drop_menu
+{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    height: 0;
+    top: 60px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.drop_menu.open
+{
+    height: 180px;
+}
+
+.drop_menu li
+{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop_menu .action_btn
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* RESPONSIVE SCALE */ /* RESPONSIVE SCALE */ /* RESPONSIVE SCALE */ /* RESPONSIVE SCALE */ /* RESPONSIVE SCALE */ /* RESPONSIVE SCALE */ /* RESPONSIVE SCALE */ /* RESPONSIVE SCALE */ /* RESPONSIVE SCALE */ /* RESPONSIVE SCALE */ 
+
+@media (max-width: 992px)
+{
+    .navbar .links,
+    .navbar .action_btn
+    {
+        display: none;
+    }
+
+    .navbar .toogle_btn
+    {
+        display: block;
+    }
+
+    .drop_menu
+    {
+        display: block;
+    }
+}

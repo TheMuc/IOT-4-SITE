@@ -10,7 +10,7 @@ body
 {
     height: 100vh;
     background-color: #000000;
-    background-image: url(https://images.unsplash.com/photo-1552845108-5f775a2ccb9b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1vdW50YWluJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww);
+    background-image: url('background.png');
     background-size: cover;
 }
 
